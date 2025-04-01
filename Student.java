@@ -1,19 +1,19 @@
 
-class Person
+class Student
 {
     private String name;
-    private int age;
+    private int grad;
 
-    public Person()
+    public Student()
     {
         name = "";
-        age = 0;
+        grad = 0;
     }
 
-    public Person(String name, int age)
+    public Person(String name, int grad)
     {
         this.name = name;
-        this.age = age;
+        this.grad = grad;
     }
 
     public String getName()
@@ -21,9 +21,9 @@ class Person
         return name;
     }
 
-    public int getAge()
+    public int getgrad()
     {
-        return age;
+        return grad;
     }
 
     public void setName(String name)
@@ -31,14 +31,14 @@ class Person
         this.name = name;
     }
 
-    public void setAge(int age)
+    public void setgrad(int grad)
     {
-        this.age = age;
+        this.grad = grad;
     }
 
     public String toString()
     {
-        return "Name: " + name + ", Age: " + age;
+        return "Name: " + name + ", Graduation Year: " + grad;
     }
 
     @Override
@@ -53,16 +53,16 @@ class Person
             return false;
         }
         Person person = (Person) other;
-        return age == person.age && (name == null ? person.name == null : name.equals(person.name));
+        return grad == person.grad && (name == null ? person.name == null : name.equals(person.name));
     }
 
     public String introduce()
     {
-        return "Hello, I am " + name + " and I am " + age + " years old.";
+        return "Hello, I am " + name + " and I am " + grad + " years old.";
     }
 
     public void celebrateBirthday()
     {
-        age++;
+        grad++;
     }
 }
